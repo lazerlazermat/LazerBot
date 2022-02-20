@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Rubik&display=swap');
 
 :root {
-    --color1: rgb(0, 132, 255)
+    --color1: rgb(0, 132, 255);
+    --color2: rgb(124, 124, 124);
 }
 
 html {
@@ -211,6 +212,21 @@ h2::after {
     align-items: center;
 }
 
+.comment {
+    padding-bottom: 5%;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+}
+
+.video {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px var(--color1);
+}
+
 .pourquoi {
     background: url('bg2.jpg');
     color: white;
@@ -224,6 +240,44 @@ h2::after {
 .bot {
     background: url('bg3.jpg') center/cover;
     color: white;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    color: rgb(175, 175, 175);
+    background: rgb(27, 27, 27);
+    padding: 3%;
+    box-shadow: 0 -2px 0 var(--color2);
+}
+
+.text-container {
+    box-shadow: 2px 0 0 var(--color2);
+}
+
+.social-container {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social {
+    padding: 0 10%;
+    box-shadow: 1px 0 0 var(--color2);
+}
+
+.social a {
+    color: var(--color2);
+    transition: 0.2s;
+}
+
+.social a:hover {
+    color: var(--color1);
+}
+
+.last-social {
+    box-shadow: none;
 }
 
 @media screen and (max-width: 950px) {
