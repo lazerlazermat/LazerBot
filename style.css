@@ -253,6 +253,7 @@ footer {
 
 .text-container {
     box-shadow: 2px 0 0 var(--color2);
+    font-size: 0.7rem;
 }
 
 .social-container {
