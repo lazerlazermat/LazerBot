@@ -83,7 +83,7 @@ nav {
 }
 
 .logo {
-    background: url(".logo.png") center/cover;
+    background: url("logo.png") center/cover;
     height: 60px;
     width: 60px;
 }
@@ -96,7 +96,7 @@ li a {
 section {
     padding: 10px;
     min-height: 90vh;
-    background: url('.bg1.jpeg') center/cover;
+    background: url('bg1.jpeg') center/cover;
     color: white;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
     box-shadow: 0 5px 6px black;
@@ -197,7 +197,7 @@ h2::after {
 }
 
 .img-bot {
-    background: url('.Bot.png') center/cover;
+    background: url('Bot.png') center/cover;
     height: 50vh;
     width: 90vh;
     border-radius: 10px;
@@ -212,7 +212,7 @@ h2::after {
 }
 
 .pourquoi {
-    background: url('.bg2.jpg');
+    background: url('bg2.jpg');
     color: white;
     box-shadow: 0 -5px 6px black;
 }
@@ -222,7 +222,7 @@ h2::after {
 }
 
 .bot {
-    background: url('.bg3.jpg') center/cover;
+    background: url('bg3.jpg') center/cover;
     color: white;
 }
 
