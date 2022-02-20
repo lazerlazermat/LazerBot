@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Rubik&display=swap');
+
+:root {
+    --color1: rgb(0, 132, 255)
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Rubik';
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+}
+
+.menu-btn {
+    display: none;
+    z-index: 2;
+    cursor: pointer;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    border: 2px solid rgb(173, 173, 173);
+    border-radius: 30px;
+    transition: 0.5s;
+    top: 5px;
+    right: 5px;
+}
+
+.menu-btn:hover{
+    color: var(--color1);
+    border-color: var(--color1);
+}
+
+.menu-btn::after{
+    content: "Menu";
+    color: var(--color1);
+    position: absolute;
+    top: 15px;
+    right: 5px;
+}
+
+#menu{
+    display: none;
+}
+
+#menu:checked + nav {
+    height: 250px;
+}
+
+#menu:checked + nav::after {
+    z-index: 3;
+    content: "";
+    height: 1px;
+    width: 40px;
+    position: absolute;
+    background: var(--color1);
+    top: 40px;
+    right: 23px;
+}
+
+.deroulant{
+    transition: 0.6s;
+    overflow: hidden;
+    z-index: 1;
+    height: 40px;
+    position: fixed;
+    padding: 10px;
+    padding-right: 40%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px rgb(44, 44, 44);
+}
+
+.logo {
+    background: url("./images/logo.png") center/cover;
+    height: 60px;
+    width: 60px;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+section {
+    padding: 10px;
+    min-height: 90vh;
+    background: url('./images/bg1.jpeg') center/cover;
+    color: white;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    box-shadow: 0 5px 6px black;
+}
+
+h1 {
+    font-family: 'Lora';
+    font-size: 4rem;
+    font-weight: 900;
+    position: relative;
+    width: 80%;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    animation: h1anim 3s forwards;
+}
+
+h1::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1vh;
+    background: var(--color1);
+    bottom: -5px;
+    left: 0;
+    border-radius: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: h1sanim 5s forwards;
+}
+
+@keyframes h1sanim {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes h1anim {
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+h2 {
+    font-family: 'Lora';
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 2rem;
+    margin-top: 0;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    height: 1vh;
+    width: 25vh;
+    position: absolute;
+    background: var(--color1);
+    bottom: -3px;
+    left: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 1px var(--color1);
+
+}
+
+.what {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    opacity: 0;
+    transform: translateY(-20%);
+    animation: animgrid 5s forwards;
+}
+
+@keyframes animgrid {
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+#ftn {
+    color: rgb(212, 0, 255);
+}
+
+.img-bot-container {
+    display: flex;
+    justify-content: center;
+}
+
+.img-bot {
+    background: url('./images/Bot.png') center/cover;
+    height: 50vh;
+    width: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 0 5px white;
+}
+
+.other-container {
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pourquoi {
+    background: url('./images/bg2.jpg');
+    color: white;
+    box-shadow: 0 -5px 6px black;
+}
+
+.but {
+    background: rgba(128, 128, 128, 0.603);
+}
+
+.bot {
+    background: url('./images/bg3.jpg') center/cover;
+    color: white;
+}
+
+@media screen and (max-width: 950px) {
+    .menu-btn {
+        display: block;
+    }
+    .container {
+        display: block;
+    }
+    .deroulant {
+        display: inline-block;
+    }
+    li {
+        margin-bottom: 20px;
+    }
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+}
